@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BodyQuiz | Kenali Tubuhmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-page="home"><span></span>BodyQuiz</a>
+      <nav aria-label="Navigasi utama">
+        <button class="nav-link active" data-page="home">Beranda</button>
+        <button class="nav-link" data-page="materi">Materi</button>
+        <button class="nav-link" data-page="kuis">Kuis</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">BELAJAR ANATOMI DENGAN CARA YANG LEBIH SERU</p>
+            <h1>Kenali tubuhmu,<br>pahami cara kerjanya.</h1>
+            <p class="muted hero-description">Pelajari sistem saraf dan sistem gerak manusia lewat materi singkat, ilustrasi, dan kuis interaktif.</p>
+            <div class="button-row">
+              <button class="primary-btn" data-page="materi">Mulai Belajar</button>
+              <button class="secondary-btn" data-page="materi">Lihat Materi</button>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Ilustrasi sistem tubuh">
+            <div class="art-circle"><svg viewBox="0 0 120 120" role="img" aria-label="Ilustrasi otak"><path d="M60 20c-12-12-29-3-28 11-13 1-18 17-9 26-9 12-2 27 10 29 1 15 18 21 27 10 9 11 26 5 27-10 12-2 19-17 10-29 9-9 4-25-9-26 1-14-16-23-28-11Z"/><path d="M60 21v74M39 36c10-2 13 7 12 14m-25 7c9-4 16 1 17 9m-9 19c8-7 16-4 18 4m29-53c-10-2-13 7-12 14m25 7c-9-4-16 1-17 9m9 19c-8-7-16-4-18 4M60 45c-7-8-14-3-13 4m13 8c7-8 14-3 13 4"/></svg></div>
+            <div class="floating-label label-one"><b>Sistem Saraf</b><small>Pusat kendali tubuh</small></div>
+            <div class="floating-label label-two"><b>Sistem Gerak</b><small>Gerak & penyangga</small></div>
+          </div>
+        </div>
+        <div class="section-heading">
+          <h2>Dua sistem, satu tubuh.</h2>
+          <p class="muted">Kenali bagian penting yang membuat tubuh bisa berpikir dan bergerak.</p>
+        </div>
+        <div class="system-cards">
+          <article class="system-card"><div class="mini-icon brain-icon">✳</div><div><h3>Sistem Saraf</h3><p class="muted">Mengatur, menerima informasi, dan mengoordinasikan respons tubuh.</p><button class="text-link" data-page="materi">Pelajari materi →</button></div></article>
+          <article class="system-card"><div class="mini-icon bone-icon">♧</div><div><h3>Sistem Gerak</h3><p class="muted">Membantu tubuh berdiri, menjaga postur, dan melakukan gerakan.</p><button class="text-link" data-page="materi">Pelajari materi →</button></div></article>
+        </div>
+      </section>
+
+      <section id="materi" class="page">
+        <p class="eyebrow">RINGKAS, VISUAL, MUDAH DIPAHAMI</p>
+        <h1 class="page-title">Jelajahi sistem tubuh manusia</h1>
+        <p class="muted page-subtitle">Pilih bagian tubuh untuk mengenal fungsi dan perannya.</p>
+        <div class="tabs">
+          <button class="tab active" data-tab="saraf">Sistem Saraf</button>
+          <button class="tab" data-tab="gerak">Sistem Gerak</button>
+        </div>
+        <div id="saraf" class="material-grid tab-panel active">
+          <article class="material-card"><div class="material-icon">🧠</div><div><h3>Otak</h3><p>Pusat kendali yang mengolah informasi dan mengatur respons tubuh.</p><button class="text-link detail-btn" data-title="Otak" data-detail="Otak merupakan pusat kendali sistem saraf. Otak menerima informasi, mengolahnya, lalu mengatur berbagai aktivitas tubuh seperti berpikir, mengingat, dan bergerak.">Baca ringkasan →</button></div></article>
+          <article class="material-card"><div class="material-icon">〰</div><div><h3>Sumsum tulang belakang</h3><p>Menghubungkan otak dengan saraf tubuh dan mengatur refleks.</p><button class="text-link detail-btn" data-title="Sumsum tulang belakang" data-detail="Sumsum tulang belakang menghubungkan otak dengan saraf di seluruh tubuh. Bagian ini juga menjadi pusat gerak refleks, yaitu respons cepat tanpa harus menunggu perintah sadar dari otak.">Baca ringkasan →</button></div></article>
+          <article class="material-card"><div class="material-icon">✳</div><div><h3>Saraf tepi</h3><p>Membawa pesan antara sistem saraf pusat dan seluruh tubuh.</p><button class="text-link detail-btn" data-title="Saraf tepi" data-detail="Saraf tepi menghubungkan sistem saraf pusat dengan organ, otot, kulit, dan bagian tubuh lainnya. Saraf ini membawa informasi menuju dan dari otak serta sumsum tulang belakang.">Baca ringkasan →</button></div></article>
+        </div>
+        <div id="gerak" class="material-grid tab-panel">
+          <article class="material-card"><div class="material-icon">🦴</div><div><h3>Tulang</h3><p>Menopang tubuh, melindungi organ, dan menjadi tempat melekat otot.</p><button class="text-link detail-btn" data-title="Tulang" data-detail="Tulang membentuk rangka tubuh, menopang tubuh, melindungi organ penting, dan menjadi tempat melekatnya otot.">Baca ringkasan →</button></div></article>
+          <article class="material-card"><div class="material-icon">♡</div><div><h3>Sendi</h3><p>Menghubungkan tulang dan memungkinkan bagian tubuh bergerak.</p><button class="text-link detail-btn" data-title="Sendi" data-detail="Sendi adalah tempat bertemunya dua tulang atau lebih. Sendi membantu tubuh melakukan berbagai gerakan, seperti menekuk siku dan lutut.">Baca ringkasan →</button></div></article>
+          <article class="material-card"><div class="material-icon">💪</div><div><h3>Otot</h3><p>Berkontraksi untuk menghasilkan gerakan dan menjaga postur.</p><button class="text-link detail-btn" data-title="Otot" data-detail="Otot dapat berkontraksi dan relaksasi. Kerja otot bersama tulang dan sendi menghasilkan gerakan serta membantu menjaga postur tubuh.">Baca ringkasan →</button></div></article>
+        </div>
+        <div class="material-footer"><p class="muted">Tips belajar: pahami fungsi setiap bagian, lalu coba uji ingatanmu lewat kuis.</p><button class="primary-btn" data-page="kuis">Mulai Kuis</button></div>
+      </section>
+
+      <section id="kuis" class="page">
+        <p class="eyebrow">UJI PEMAHAMANMU</p>
+        <h1 class="page-title">Kuis Sistem Tubuh Manusia</h1>
+        <div class="quiz-layout">
+          <div class="quiz-main">
+            <div class="question-meta" id="question-meta">PERTANYAAN 01</div>
+            <h2 id="question-text">Bagian sistem saraf pusat yang berfungsi menghubungkan otak dengan saraf di seluruh tubuh dan menjadi pusat gerak refleks disebut apa?</h2>
+            <div id="answers" class="answers"></div>
+            <div class="quiz-controls"><button id="next-question" class="primary-btn" disabled>Lanjutkan</button></div>
+          </div>
+          <aside class="quiz-aside"><h3>Sedikit demi sedikit.</h3><p class="muted">Baca pertanyaan dengan teliti. Pilih satu jawaban yang paling tepat.</p><div class="hint-box"><b>PETUNJUK</b><p>Kamu akan menjawab 2 pertanyaan seputar sistem saraf dan sistem gerak.</p></div></aside>
+        </div>
+      </section>
+
+      <section id="hasil" class="page result-page">
+        <p class="eyebrow">HASIL PEMBELAJARANMU</p>
+        <h1 class="page-title">Kuis selesai!</h1>
+        <div class="result-card">
+          <div class="result-mark">✓</div>
+          <p class="muted">Skor akhir kamu</p>
+          <div class="score" id="score-value">0</div>
+          <p id="result-message">Terus belajar dan coba lagi, ya.</p>
+          <div class="result-actions"><button class="primary-btn" id="retry-quiz">Ulangi Kuis</button><button class="secondary-btn" data-page="materi">Pelajari Materi</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="detail-modal" aria-hidden="true">
+    <div class="detail-modal"><button class="modal-close" id="close-modal" aria-label="Tutup">×</button><p class="eyebrow">RINGKASAN MATERI</p><h2 id="modal-title"></h2><p id="modal-detail" class="muted"></p><button class="primary-btn" id="modal-ok">Mengerti</button></div>
+  </div>
+  <div class="feedback-backdrop" id="feedback" aria-hidden="true">
+    <div class="feedback-card"><div id="feedback-symbol" class="feedback-symbol">✓</div><h2 id="feedback-title">Jawaban benar!</h2><p id="feedback-copy">Otak merupakan pusat kendali yang mengolah informasi dan mengatur aktivitas tubuh.</p><button class="primary-btn" id="feedback-continue">Lanjutkan</button></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
