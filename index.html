@@ -1,136 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NeuroMotion - Media pembelajaran interaktif sistem saraf dan sistem gerak manusia.">
-  <title>NeuroMotion | Media Pembelajaran</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NeuroPedia: media belajar interaktif sistem saraf dan sistem gerak manusia.">
+<title>NeuroPedia · Media Belajar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <header class="site-header">
-      <a class="brand" href="#" data-page-link="home" aria-label="NeuroMotion beranda">
-        <span class="brand-mark">N</span>
-        <span><strong>NeuroMotion</strong><small>Interactive Learning</small></span>
-      </a>
-      <nav class="main-nav" aria-label="Navigasi utama">
-        <button class="nav-link active" data-page-link="home">Beranda</button>
-        <button class="nav-link" data-page-link="materi">Materi</button>
-        <button class="nav-link" data-page-link="quiz">Kuis</button>
-        <button class="nav-link" data-page-link="result">Hasil</button>
-      </nav>
-    </header>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="top">
+  <a class="brand" href="#/" aria-label="Neuropedia, beranda">Neuro<em>Pedia</em></a>
+  <nav aria-label="Navigasi utama">
+    <a href="#/" data-nav="home">Beranda</a>
+    <a href="#/materi/1" data-nav="materi">Materi</a>
+    <a href="#/kuis" data-nav="kuis">Kuis</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <section id="home" class="page">
+    <div class="hero">
+      <div>
+        <p class="kicker">IPAS · Sistem Saraf &amp; Sistem Gerak</p>
+        <h1>Dari rangsangan sampai gerakan, <em>dalam sepersekian detik.</em></h1>
+        <p class="lead">Saat tanganmu menjauh dari panci panas, otak, saraf, otot, dan tulang sudah bekerja sebagai satu tim. Pelajari tujuh bab ringkas, lalu uji pemahamanmu.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#/materi/1">Mulai dari Otak</a>
+          <a class="btn btn-ghost" href="#/kuis">Langsung ke kuis</a>
+        </div>
+      </div>
+      <figure class="plate">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nervous_system_diagram-en.svg?width=700" alt="Diagram sistem saraf manusia: otak, sumsum tulang belakang, dan saraf tepi" width="540" height="600">
+        <figcaption><span>Plate 01</span> Sistem saraf manusia · <a href="https://commons.wikimedia.org/wiki/File:Nervous_system_diagram-en.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></figcaption>
+      </figure>
+    </div>
+    <section class="pathway" aria-labelledby="pw">
+      <h2 id="pw">Jalur satu gerakan</h2>
+      <ol class="track">
+        <li><b>1</b>Rangsangan<small>panas, cahaya, sentuhan</small></li>
+        <li><b>2</b>Reseptor<small>menangkap rangsangan</small></li>
+        <li><b>3</b>Saraf sensorik<small>membawa informasi</small></li>
+        <li><b>4</b>Pusat saraf<small>otak / sumsum tulang belakang</small></li>
+        <li><b>5</b>Otot &amp; tulang<small>bergerak bersama sendi</small></li>
+      </ol>
+    </section>
+  </section>
 
-    <main>
-      <section id="home" class="page">
-        <div class="hero hero-home">
-          <div class="hero-copy">
-            <p class="eyebrow">MEDIA PEMBELAJARAN INTERAKTIF</p>
-            <h1>Memahami Tubuh Manusia, Dimulai dari Sini.</h1>
-            <p class="hero-description">Jelajahi cara sistem saraf dan sistem gerak bekerja sama melalui materi ringkas, ilustrasi, dan kuis interaktif.</p>
-            <div class="hero-actions">
-              <button class="button button-primary" data-go="materi">Mulai Belajar <span aria-hidden="true">→</span></button>
-              <button class="button button-secondary" data-go="materi">Lihat Materi</button>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="anatomy-image-wrap">
-              <img
-                class="hero-anatomy-image"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Nervous_system_diagram-en.svg/960px-Nervous_system_diagram-en.svg.png"
-                alt="Ilustrasi anatomi sistem saraf manusia yang menunjukkan otak, sumsum tulang belakang, dan saraf tepi"
-                loading="eager"
-                onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Nervous_system_diagram-en.svg/500px-Nervous_system_diagram-en.svg.png';"
-              >
-            </div>
-            <div class="visual-caption">
-              <span class="visual-number">01</span>
-              <span><strong>Sistem Saraf</strong><small>Pusat koordinasi tubuh</small></span>
-            </div>
-            <div class="visual-caption visual-caption-second">
-              <span class="visual-number">02</span>
-              <span><strong>Sistem Gerak</strong><small>Struktur dan pergerakan</small></span>
-            </div>
-          </div>
-        </div>
+  <section id="materi" class="page hidden">
+    <div class="study">
+      <nav class="toc" id="toc" aria-label="Daftar bab"></nav>
+      <div class="reader">
+        <div id="chapter" aria-live="polite"></div>
+        <div class="pager" id="pager"></div>
+      </div>
+    </div>
+  </section>
 
-        <div class="home-features">
-          <article class="feature-card">
-            <span class="feature-index">01 / LEARN</span>
-            <h2>Pelajari Materi</h2>
-            <p>Pahami bagian dan fungsi sistem saraf serta sistem gerak manusia.</p>
-            <button class="text-link" data-go="materi">Buka materi <span aria-hidden="true">↗</span></button>
-          </article>
-          <article class="feature-card">
-            <span class="feature-index">02 / PRACTICE</span>
-            <h2>Uji Pemahaman</h2>
-            <p>Kerjakan kuis interaktif untuk menguji pemahamanmu.</p>
-            <button class="text-link" data-go="quiz">Mulai kuis <span aria-hidden="true">↗</span></button>
-          </article>
-          <article class="feature-card">
-            <span class="feature-index">03 / REVIEW</span>
-            <h2>Lihat Hasil</h2>
-            <p>Periksa skor dan jumlah jawaban benar setelah menyelesaikan kuis.</p>
-            <button class="text-link" data-go="result">Lihat hasil <span aria-hidden="true">↗</span></button>
-          </article>
-        </div>
-        <p class="image-attribution">Ilustrasi sistem saraf: <a href="https://commons.wikimedia.org/wiki/File:Nervous_system_diagram-en.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
-      </section>
-
-      <section id="materi" class="page hidden">
-        <div class="section-heading">
-          <p class="eyebrow">LEARNING MATERIAL</p>
-          <h1>Materi Pembelajaran</h1>
-          <p>Pilih topik yang ingin kamu pelajari.</p>
-        </div>
-        <div id="topic-tabs" class="topic-tabs" aria-label="Pilihan topik materi"></div>
-        <article id="topic-content" class="topic-card" aria-live="polite"></article>
-        <div class="content-actions">
-          <button id="prev-topic" class="button button-secondary">← Sebelumnya</button>
-          <button id="next-topic" class="button button-primary">Selanjutnya →</button>
-        </div>
-        <div class="quiz-invite">
-          <div><strong>Sudah selesai belajar?</strong><p>Uji pemahamanmu melalui 10 soal pilihan ganda.</p></div>
-          <button class="button button-primary" data-go="quiz">Mulai Kuis</button>
-        </div>
-      </section>
-
-      <section id="quiz" class="page hidden">
-        <div class="quiz-card">
-          <p class="eyebrow">KNOWLEDGE CHECK</p>
-          <div class="quiz-meta"><strong id="question-count">Soal 1 dari 10</strong><span id="question-percent">10%</span></div>
-          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
-          <h2 id="question-text"></h2>
-          <div id="answer-options" class="answer-options"></div>
-          <p id="feedback" class="feedback" aria-live="polite"></p>
-          <div class="quiz-actions">
-            <button class="button button-secondary" data-go="materi">Kembali ke Materi</button>
-            <button id="next-question" class="button button-primary" disabled>Selanjutnya →</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="result" class="page hidden">
-        <div class="result-card">
-          <p class="eyebrow">QUIZ COMPLETED</p>
-          <h1>Hasil Kuis</h1>
-          <div id="score" class="score">0</div>
-          <p id="result-message" class="result-message">Kuis telah selesai.</p>
-          <div class="result-stats">
-            <div><span>Jawaban benar</span><strong id="correct-count">0</strong></div>
-            <div><span>Jawaban salah</span><strong id="wrong-count">0</strong></div>
-          </div>
-          <div class="result-actions">
-            <button id="retry-quiz" class="button button-primary">Ulangi Kuis</button>
-            <button class="button button-secondary" data-go="materi">Pelajari Materi Lagi</button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>NeuroMotion · Learning Media</footer>
-  </div>
-  <script src="script.js"></script>
+  <section id="kuis" class="page hidden">
+    <div class="quiz" id="quiz"></div>
+  </section>
+</main>
+<footer>NeuroPedia · Ahmad Denny Khoirul Huda(02) · 10 PPLG 2.</footer>
+<script src="script.js"></script>
 </body>
 </html>
